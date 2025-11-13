@@ -6,7 +6,7 @@
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     *,
@@ -18,7 +18,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: #3b2b4a;
+      background-color: #ffffff;
       color: #1c1322;
     }
 
@@ -35,11 +35,6 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
-    }
-
-    .main-content {
-      padding: 40px 0 80px;
-      flex: 1;
     }
 
     h1, h2, h3 {
@@ -86,6 +81,13 @@
       letter-spacing: 0.1em;
     }
 
+    .nav-left a,
+    .nav-right a {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
     .logo-wrapper {
       position: absolute;
       left: 50%;
@@ -98,13 +100,85 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* no drop shadow */
       box-shadow: none;
     }
 
     .logo-wrapper img {
       max-width: 70%;
       height: auto;
+      transition: transform 3s ease;
+    }
+
+    .logo-wrapper:hover img {
+      transform: rotate(360deg);
+    }
+
+    .logo-wrapper a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    /* HERO */
+
+    .hero-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 16px; 
+        padding-left: 94px;   
+}
+
+.hero-image {
+   max-width: 1000px;
+}
+  .intro-text-area {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .intro-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+    /* INTRO TEXT + BAR */
+
+ .intro-text-area {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.intro-text {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+    .intro-text-box {
+  max-width: 1000px;   /* match the image width */
+  margin: 0 auto;      /* center it horizontally */
+}
+
+.intro-text-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;      
+}
+
+
+    .intro-bar {
+      background-color: #cdb1d6;
+      padding: 12px 0;
     }
 
     /* FOOTER */
@@ -129,32 +203,31 @@
     .footer-column {
       flex: 1;
     }
-.footer-heading {
-  font-size: 16px;         /* bigger than body */
-  font-weight: 700;        /* bolder */
-  letter-spacing: 0.18em;  /* a bit more spaced */
-  margin: 0 0 20px;
-  opacity: 0.75;           /* still softer than body text */
-}
 
-/* footer body text */
-.footer-nav a,
-.footer-policy a,
-.footer-contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 13px;
-  line-height: 2.4;   /* increased vertical spacing */
-  margin-bottom: 6px; /* adds extra breathing room */
-}
+    .footer-heading {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      margin: 0 0 20px;
+      opacity: 0.75;
+    }
+
+    .footer-nav a,
+    .footer-policy a,
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      line-height: 2.4;
+      margin-bottom: 6px;
+    }
 
     .icon {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-  margin-top: 4px;
-
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      margin-top: 4px;
     }
 
     .site-footer a:link {
@@ -173,29 +246,10 @@
       opacity: 0.7;
     }
 
-    /* small screens */
-    @media (max-width: 800px) {
-      .footer-inner {
-        flex-direction: column;
-        gap: 32px;
-      }
-    }
-    
-    .logo-wrapper img {
-  transition: transform 3s ease; 
-}
-
-.logo-wrapper:hover img {
-  transform: rotate(360deg);
-}
-
-    
-    
   </style>
 </head>
 
 <body>
-
   <div class="page-wrapper">
 
     <!-- HEADER -->
@@ -208,7 +262,9 @@
         </nav>
 
         <div class="logo-wrapper">
-          <img src="logo.png" alt="Julia Mooncake logo">
+          <a href="#">
+            <img src="logo.png" alt="Julia Mooncake logo">
+          </a>
         </div>
 
         <nav class="nav-right">
@@ -219,83 +275,87 @@
       </div>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="content-container main-content">
-      <h1>Welcome to Julia Mooncake</h1>
-      <p>Replace this with your homepage content.</p>
-    </main>
-
-    <!-- FOOTER -->
-   <footer class="site-footer">
-  <div class="footer-inner content-container">
-
-    <!-- NAVIGATE -->
-    <div class="footer-column footer-nav">
-      <h3 class="footer-heading">NAVIGATE</h3>
-      <a href="menu.html">MENU</a>
-      <a href="about.html">ABOUT</a>
-      <a href="contact.html">CONTACT</a>
-      <a href="order.html">ORDER</a>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="footer-column footer-contact">
-      <h3 class="footer-heading">VISIT & CONTACT</h3>
-
-      <div class="footer-contact-list">
-
-        <!-- MAIL -->
-        <div class="footer-contact-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="5" width="18" height="14" rx="2" />
-            <polyline points="3,7 12,13 21,7" />
-          </svg>
-          <span>JULIAMOONCAKE@GMAIL.COM</span>
-        </div>
-
-        <!-- LOCATION -->
-        <div class="footer-contact-item">
-  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0z" />
-    <circle cx="12" cy="10" r="3" />
-  </svg>
-  <span>WATERLOO, ONTARIO</span>
-</div>
-
-
-        <!-- CLOCK -->
-        <div class="footer-contact-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9" />
-            <polyline points="12 7 12 12 15 14" />
-          </svg>
-          <span>MON–FRI, 10AM – 6PM</span>
-        </div>
-
-        <!-- PHONE -->
-        <div class="footer-contact-item">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.13 4.1 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-          <span>MON–FRI, 10AM – 6PM</span>
-        </div>
-
+    <!-- HERO IMAGE -->
+    <div class="content-container">
+      <div class="hero-image-wrapper">
+        <img src="story1.png" class="hero-image" alt="Bunnies making mooncakes">
       </div>
     </div>
 
-    <!-- POLICIES -->
-    <div class="footer-column footer-policy">
-      <h3 class="footer-heading">POLICIES</h3>
-      <a href="refund.html">REFUND POLICY</a>
-      <a href="terms.html">TERMS OF SERVICE</a>
-      <a href="privacy.html">PRIVACY POLICY</a>
-      <a href="https://uwaterloo.ca/" target="_blank">UNIVERSITY OF WATERLOO</a>
-    </div>
+    <!-- TEXT UNDER IMAGE -->
+    
+<div class="intro-text-box">
+  <p class="intro-text">
+    At Julia Moon Cake, every treat is handmade with traditional recipes and<br>
+    a touch of modern flavor. Perfect for family gatherings, gifts, and festivals.
+  </p>
+</div>
+
+    <!-- THIN PURPLE BAR -->
+    <div class="intro-bar"></div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner content-container">
+
+        <div class="footer-column footer-nav">
+          <h3 class="footer-heading">NAVIGATE</h3>
+          <a href="menu.html">MENU</a>
+          <a href="about.html">ABOUT</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="order.html">ORDER</a>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3 class="footer-heading">VISIT & CONTACT</h3>
+
+          <div class="footer-contact-list">
+
+            <div class="footer-contact-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <polyline points="3,7 12,13 21,7" />
+              </svg>
+              <span>JULIAMOONCAKE@GMAIL.COM</span>
+            </div>
+
+            <div class="footer-contact-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>WATERLOO, ONTARIO</span>
+            </div>
+
+            <div class="footer-contact-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <polyline points="12 7 12 12 15 14" />
+              </svg>
+              <span>MON–FRI, 10AM – 6PM</span>
+            </div>
+
+            <div class="footer-contact-item">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.13 4.1 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>MON–FRI, 10AM – 6PM</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="footer-column footer-policy">
+          <h3 class="footer-heading">POLICIES</h3>
+          <a href="refund.html">REFUND POLICY</a>
+          <a href="terms.html">TERMS OF SERVICE</a>
+          <a href="privacy.html">PRIVACY POLICY</a>
+          <a href="https://uwaterloo.ca/" target="_blank">UNIVERSITY OF WATERLOO</a>
+        </div>
+
+      </div>
+    </footer>
 
   </div>
-</footer>
-
-  </div>
-
 </body>
 </html>
