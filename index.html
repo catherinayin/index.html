@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Julia Mooncake – Home</title>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #3b2b4a;
+      color: #1c1322;
+    }
+
+    .page-wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .main-content {
+      padding: 40px 0 80px;
+      flex: 1;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    a {
+      color: #1c1322;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    .site-header {
+      background-color: #f4e7ff;
+      position: relative;
+      padding-top: 24px;
+      padding-bottom: 32px;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      gap: 24px;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+    }
+
+    .logo-wrapper {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -20%);
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo-wrapper img {
+      max-width: 70%;
+      height: auto;
+    }
+
+    .site-footer {
+      background-color: #f4e7ff;
+      padding: 24px 0 32px;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+    }
+
+    .footer-heading {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+      margin: 0 0 8px;
+    }
+
+    .footer-nav a,
+    .footer-policy a {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .footer-contact p {
+      margin: 4px 0;
+    }
+
+    .site-footer a:link {
+      color: #1c1322;
+    }
+
+    .site-footer a:visited {
+      color: #3b2b4a;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .site-footer a:active {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner content-container">
+
+        <nav class="nav-left">
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+        </nav>
+
+        <div class="logo-wrapper">
+          <!-- Replace with your own logo image -->
+          <img src="images/logo.png" alt="Julia Mooncake logo">
+        </div>
+
+        <nav class="nav-right">
+          <a href="contact.html">Contact</a>
+          <a href="order.html">Order</a>
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content-container main-content">
+      <h1>Welcome to Julia Mooncake</h1>
+      <p>Replace this with your homepage content.</p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-inner content-container">
+
+        <div class="footer-column footer-nav">
+          <h3 class="footer-heading">Navigate</h3>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="order.html">Order</a>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3 class="footer-heading">Visit & Contact</h3>
+          <p>📧 <a href="mailto:juliamooncake@gmail.com">juliamooncake@gmail.com</a></p>
+          <p>📍 Waterloo, Ontario</p>
+          <p>🕒 Mon–Fri, 10AM – 6PM</p>
+          <p>📞 Mon–Fri, 10AM – 6PM</p>
+        </div>
+
+        <div class="footer-column footer-policy">
+          <h3 class="footer-heading">Policies</h3>
+          <a href="refund.html">Refund Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="https://uwaterloo.ca/" target="_blank">University of Waterloo</a>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
