@@ -23,20 +23,19 @@
     }
 
     .page-wrapper {
-      max-width: 1440px;
-      margin: 0 auto;
-      min-height: 100vh;
-      background-color: #ffffff;
-      display: flex;
-      flex-direction: column;
-    }
+  width: 1440px;             
+  margin: 0 auto;           
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
 
-    .content-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
+.content-container {
+  width: 1200px;           
+  margin: 0 auto;           
+  padding: 0;             
+}
     h1, h2, h3 {
       font-weight: 600;
       letter-spacing: 0.03em;
@@ -124,50 +123,38 @@
 
     /* HERO */
 
-    .hero-image-wrapper {
+   .hero-image-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 16px auto 16px; 
-        padding-left: 94px;   
+  margin: 16px auto;
+  padding-left: 120;    
 }
 
 .hero-image {
-   max-width: 1000px;
+  max-width: 1000px;
+  width: 100%;
+  display: block;
 }
-  .intro-text-area {
-    padding-left: 0;
-    padding-right: 0;
-  }
+
 
   .intro-text {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 18px;
     line-height: 1.7;
     margin-top: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 50px;
     text-align: center;
   }
-
-    /* INTRO TEXT + BAR */
 
  .intro-text-area {
   padding-left: 0;
   padding-right: 0;
 }
 
-.intro-text {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
-  margin-top: 0px;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
     .intro-text-box {
-  max-width: 1000px;   /* match the image width */
-  margin: 0 auto;      /* center it horizontally */
+  max-width: 1000px;   
+  margin: 0 auto;    
 }
 
 .intro-text-wrapper {
@@ -245,6 +232,118 @@
     .site-footer a:active {
       opacity: 0.7;
     }
+/* TOP SELLERS SECTION */
+
+.top-sellers-section {
+  background-color: #ffffff;
+  padding: 0px 0 80px;
+}
+
+/* lanterns + title row */
+.top-sellers-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.lantern {
+  height: 54px;
+  width: auto;
+}
+
+.lantern-right {
+  height: 110px;   
+  
+}
+.lantern-left {
+  margin-top: -56px;  
+}
+
+.top-sellers-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* MAIN AREA */
+.top-sellers-main {
+  position: relative;
+  text-align: center;
+}
+
+/* yellow band behind mooncakes */
+.top-sellers-band {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 24px;
+}
+
+.top-sellers-band::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 140px;
+  background-color: #FFD684;
+  z-index: 0;
+  border-radius: 4px;
+}
+
+.top-sellers-image {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* labels under */
+.top-sellers-labels {
+  display: flex;
+  justify-content: space-between;
+  max-width: 850px;
+  margin: 0 auto 40px;
+  font-family: 'Karla', sans-serif;
+  font-size: 15px;
+}
+
+.top-sellers-labels span {
+  flex: 1;
+  text-align: center;
+}
+
+/* Button */
+.menu-cta {
+  background-color: #FFBA51; /* NEW COLOR */
+  color: black;
+  border: none;
+  padding: 15px 52px;
+  border-radius: 999px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu-cta:hover {
+  filter: brightness(1.08);
+}
+
+/* bunny on left */
+.bunny-image {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: 140px;
+  z-index: 3;
+}
+
 
   </style>
 </head>
@@ -284,15 +383,52 @@
 
     <!-- TEXT UNDER IMAGE -->
     
-<div class="intro-text-box">
-  <p class="intro-text">
-    At Julia Moon Cake, every treat is handmade with traditional recipes and<br>
-    a touch of modern flavor. Perfect for family gatherings, gifts, and festivals.
-  </p>
+<div class="content-container intro-text-area">
+  <div class="intro-text-box">
+    <p class="intro-text">
+      At Julia Moon Cake, every treat is handmade with traditional recipes and<br>
+      a touch of modern flavor. Perfect for family gatherings, gifts, and festivals.
+    </p>
+  </div>
 </div>
 
-    <!-- THIN PURPLE BAR -->
-    <div class="intro-bar"></div>
+   <!-- THIN PURPLE BAR -->
+<div class="intro-bar"></div>
+<!-- TOP SELLERS SECTION -->
+<section class="top-sellers-section">
+
+  <!-- lanterns + title -->
+<div class="content-container top-sellers-header">
+  <img src="lone.png" alt="Lantern" class="lantern lantern-left">
+  <h2 class="top-sellers-title">TOP SELLERS</h2>
+  <img src="ltwo.png" alt="Lantern" class="lantern lantern-right">
+</div>
+
+
+  <div class="content-container top-sellers-main">
+
+    <!-- YELLOW BAND WITH MOONCAKES SITTING ON TOP -->
+    <div class="top-sellers-band">
+      <img src="3mc.png" alt="Top Selling Mooncakes" class="top-sellers-image">
+    </div>
+
+    <!-- labels under -->
+    <div class="top-sellers-labels">
+      <span>Double Yolk White Lotus</span>
+      <span>Deluxe Sampler Pack</span>
+      <span>Mixed Nuts</span>
+    </div>
+
+    <!-- button -->
+    <button class="menu-cta">CHECK OUT THE MENU</button>
+
+    <!-- bunny -->
+    <img src="bunnylant.png" alt="Bunny holding lantern" class="bunny-image">
+
+  </div>
+
+
+</section>
 
     <!-- FOOTER -->
     <footer class="site-footer">
