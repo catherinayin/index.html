@@ -308,22 +308,37 @@
       text-align: center;
     }
 
-    .menu-cta {
-      background-color: #FFBA51;
-      color: black;
-      border: none;
-      padding: 15px 52px;
-      border-radius: 999px;
-      font-family: 'Karla', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
+   /* UNIVERSAL CTA BUTTON — identical for <button> and <a> */
+.menu-cta {
+  display: inline-block;
+  background-color: #FFBA51;
+  color: black;
+  border: none;
+  padding: 15px 52px;
+  border-radius: 999px;
+  font-family: 'Quicksand', sans-serif;  /* unified font */
+  font-weight: 700;
+  font-size: 16px;                      /* unified size */
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
 
-    .menu-cta:hover {
-      filter: brightness(1.08);
-    }
+/* Remove browser defaults for button */
+button.menu-cta {
+  appearance: none;
+  border: none;
+  background: #FFBA51;
+  padding: 15px 52px;
+}
+
+/* Hover (same everywhere) */
+.menu-cta:hover,
+.menu-cta:focus {
+  filter: brightness(1.08);
+  text-decoration: none;
+}
 
     .bunny-image {
       position: absolute;
@@ -404,7 +419,11 @@
           <span>Mixed Nuts</span>
         </div>
 
-        <button class="menu-cta">CHECK OUT THE MENU</button>
+        <a href="menu.html" class="menu-cta-link">
+  <button class="menu-cta">CHECK OUT THE MENU</button>
+</a>
+
+        
 
         <img src="bunnylant.png" alt="Bunny holding lantern" class="bunny-image">
 

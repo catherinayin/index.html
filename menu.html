@@ -82,8 +82,7 @@
 
     .active {
       text-decoration: none; 
-      /* Add a border-bottom if you want to show active state visually, 
-         otherwise this just prevents the default underline */
+     
     }
 
     .logo-wrapper {
@@ -192,6 +191,76 @@
     /* =========================================
        MENU PAGE SPECIFIC STYLES
        ========================================= */
+    .menu-top-cta-wrapper {
+  text-align: center;
+  margin-top: -15px;
+}
+
+.menu-cta {
+  display: inline-block;
+  background-color: #FFBA51;
+  color: black;
+  border: none;
+  padding: 15px 52px;
+  border-radius: 999px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+}
+button.menu-cta {
+  padding: 15px 52px;
+  border: none;
+  background-color: #FFBA51;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 999px;
+  font-size: 16px; /* matches anchor CTA */
+  display: inline-block;
+}
+
+    button.menu-cta:hover {
+  filter: brightness(1.08);
+}
+
+.menu-cta:hover,
+.menu-cta:focus,
+.menu-cta:active {
+  filter: brightness(1.08);
+  text-decoration: none;  
+}
+
+
+.menu-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-top-item {
+  width: 32%;
+  text-align: center;
+}
+
+.menu-top-item img {
+  width: 100%;
+  height: auto;
+}
+
+.menu-top-caption {
+  margin-top: 12px;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
 
     .menu-hero {
       padding: 40px 0 20px;
@@ -250,22 +319,9 @@
       text-align: center;
     }
 
-    .menu-cta {
-      background-color: #FFBA51;
-      color: #000000;
-      border: none;
-      padding: 15px 52px;
-      border-radius: 999px;
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-top: 8px;
-    }
-
     .menu-cta:hover {
       filter: brightness(1.08);
+      
     }
 
     /* Description + pricing */
@@ -286,58 +342,59 @@
       margin-right: auto;
     }
 
-    .pricing-row {
-      display: flex;
-      justify-content: center;
-      gap: 45px;
-      max-width: 820px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
+  /* ===== PRICING CARDS – REDESIGN ===== */
 
-    .pricing-card {
-      background-color: #f0d5ff;
-      border-radius: 28px;
-      padding: 30px 42px;
-      min-width: 300px;
-      box-shadow: 0 10px 22px rgba(28, 19, 34, 0.06);
-      font-family: 'Karla', sans-serif;
-      text-align: left;
-      font-size: 17px;
-    }
+.pricing-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  max-width: 820px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
 
-    .pricing-card-title {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 15px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin: 0 0 16px;
-    }
+.pricing-card {
+  background-color: #f0d5ff;
+  border-radius: 28px;
+  padding: 28px 36px;
+  min-width: 300px;
+  box-shadow: 0 10px 22px rgba(28, 19, 34, 0.06);
+  font-family: 'Karla', sans-serif;
+  text-align: left;
+  font-size: 17px;
+}
 
-    .pricing-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+/* heading inside card */
+.pricing-card-title {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
 
-    .pricing-list li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      gap: 16px;
-    }
+/* list layout */
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  row-gap: 8px;        
+}
 
-    .pricing-label {
-      white-space: nowrap;
-    }
+.pricing-list li {
+  display: grid;
+  grid-template-columns: auto max-content;
+  column-gap: 20px;                 
+  align-items: baseline;
+}
 
-    .pricing-price {
-      margin-left: auto;
-      font-weight: 700;
-      font-size: 18px;
-    }
+
+.pricing-price {
+  font-weight: 700;
+  font-size: 18px;
+}
 
     .menu-grid {
       padding: 56px 0 32px;
@@ -417,9 +474,10 @@
 
     .menu-ready {
       text-align: center;
-      padding-top: 8px;
+      padding-top: 2px;
+      padding-bottom: 8px;
       font-family: 'Karla', sans-serif;
-      font-size: 15px;
+      font-size: 18px;
     }
 
     .menu-ready button {
@@ -483,24 +541,29 @@
           <div class="menu-top-wrapper">
             <div class="menu-top-band"></div>
 
-            <div class="menu-top-images">
-              <img src="dubyolk.png" alt="Double Yolk White Lotus">
-              <img src="fourpack.png" alt="Deluxe Sampler Pack">
-              <img src="nuts.png" alt="Mixed Nuts">
-            </div>
-            
-          </div>
+           <div class="menu-top-row">
 
-          <div class="menu-top-labels">
-            <span>Double Yolk White Lotus</span>
-            <span>Deluxe Sampler Pack</span>
-            <span>Mixed Nuts</span>
-          </div>
+  <div class="menu-top-item">
+    <img src="dubyolk.png" alt="Double Yolk White Lotus">
+    <p class="menu-top-caption">Double Yolk White Lotus</p>
+  </div>
 
-          <button class="menu-cta">ORDER NOW</button>
+  <div class="menu-top-item">
+    <img src="fourpack.png" alt="Deluxe Sampler Pack">
+    <p class="menu-top-caption">Deluxe Sampler Pack</p>
+  </div>
+
+  <div class="menu-top-item">
+    <img src="nuts.png" alt="Mixed Nuts">
+    <p class="menu-top-caption">Mixed Nuts</p>
+  </div>
         </div>
       </section>
 
+          <div class="menu-top-cta-wrapper">
+  <a href="order.html" class="menu-cta">ORDER NOW</a>
+</div>
+          
       <section class="menu-description">
         <div class="content-container">
           <p>
@@ -603,7 +666,8 @@
 
           <div class="menu-ready">
             <p>Ready to try your favourites?</p>
-            <button class="menu-cta">GET YOUR MOONCAKES</button>
+     <a href="order.html" class="menu-cta">GET YOUR MOONCAKES</a>
+
           </div>
         </div>
       </section>
